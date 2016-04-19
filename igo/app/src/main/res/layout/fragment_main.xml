@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="424dp"
         android:layout_height="28dp"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/m5" />
 
     <ImageView
         android:layout_width="595dp"
@@ -21,8 +21,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_gravity="right|center_vertical" />
+        android:text="Compartir"
+        android:id="@+id/compartir"
+        android:layout_gravity="left|bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contactar"
+        android:id="@+id/contactar"
+        android:layout_gravity="center_horizontal|bottom"
+
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reportar"
+        android:id="@+id/reportar"
+        android:layout_gravity="right|bottom" />
+
 
 </FrameLayout>

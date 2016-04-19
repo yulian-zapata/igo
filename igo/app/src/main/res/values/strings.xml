@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">igo</string>
+    <string name="app_name">I go!</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -13,6 +13,13 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="m1">Reportar</string>
+    <string name="m2">Eliminar</string>
+    <string name="m3">Compartir</string>
+    <string name="m4">Contactar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="m5">Nombre usuario y fecha...</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

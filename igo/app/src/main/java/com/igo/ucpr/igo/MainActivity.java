@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
         FragmentManager fragmentManager = getSupportFragmentManager();
         String fragmentTag = MainFragment.TAG;
         if (savedInstanceState == null) {
+
             FragmentTransaction ft = fragmentManager.beginTransaction();
             fragment = new MainFragment();
             ft.add(R.id.activity_main_container, fragment, fragmentTag);

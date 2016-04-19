@@ -1,6 +1,7 @@
 package com.igo.ucpr.igo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -73,11 +74,12 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-        Button compartir  = (Button) view.findViewById(R.id.compartir);
-        compartir.setOnClickListener(new View.OnClickListener() {
+        Button consultar  = (Button) view.findViewById(R.id.consultar);
+        consultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "vompartir ...",Toast.LENGTH_SHORT );
+                Toast.makeText(getActivity(), "vompartir ...",Toast.LENGTH_SHORT ).show();
+                startActivity(new Intent(getActivity(),InfoActivity.class));
             }
         });
 

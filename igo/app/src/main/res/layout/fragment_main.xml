@@ -21,8 +21,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Compartir"
-        android:id="@+id/compartir"
+        android:text="Consultar"
+        android:id="@+id/consultar"
         android:layout_gravity="left|bottom" />
 
     <Button

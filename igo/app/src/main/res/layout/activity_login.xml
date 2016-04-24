@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.igo.ucpr.igo.LoginActivity">
+    tools:context=".Activitys.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -78,7 +78,7 @@
                 android:id="@+id/imageView"
                 android:layout_gravity="center"
 
-                android:background="@drawable/paisaje" />
+                android:background="@drawable/i2" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

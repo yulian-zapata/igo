@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.igo.ucpr.igo.MainFragment"
+    tools:context=".Activitys.MainFragment"
     android:background="@drawable/abc_list_focused_holo">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +16,7 @@
         android:layout_height="370dp"
         android:id="@+id/imageView"
         android:layout_gravity="center"
-        android:src="@drawable/paisaje" />
+        android:src="@drawable/i3" />
 
     <Button
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regresar"
+        android:text="Autor"
         android:id="@+id/report4"
         android:layout_gravity="right|center_vertical" />
 

@@ -7,9 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Activitys.InfoActivity">
+    tools:context=".Activitys.ReportActivity">
 
-    <include layout="@layout/activity_info_container" />
+    <include layout="@layout/activity_report_container" />
 
 
 </RelativeLayout>

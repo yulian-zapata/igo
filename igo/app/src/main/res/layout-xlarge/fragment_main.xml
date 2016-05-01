@@ -12,7 +12,7 @@
         android:text="@string/m5" />
 
     <ImageView
-        android:background="@drawable/i1"
+        android:background="@drawable/p1"
         android:layout_width="1225dp"
         android:layout_height="1270dp"
         android:id="@+id/imageView"

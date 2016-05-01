@@ -16,7 +16,7 @@
         android:layout_width="595dp"
         android:layout_height="370dp"
         android:layout_gravity="center"
-        android:src="@drawable/i2" />
+        android:src="@drawable/p2" />
 
     <Button
         android:id="@+id/consultar"

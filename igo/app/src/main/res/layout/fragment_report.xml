@@ -16,7 +16,7 @@
         android:layout_height="370dp"
         android:id="@+id/imageView"
         android:layout_gravity="center"
-        android:src="@drawable/i3" />
+        android:src="@drawable/p3" />
 
     <Button
         android:layout_width="wrap_content"

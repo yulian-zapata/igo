@@ -22,7 +22,7 @@ public class ReportActivity extends AppCompatActivity  implements CompartirFragm
         if (savedInstanceState == null) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             fragment = new ReportFragment();
-            ft.add(R.id.activity_report_container, fragment, fragmentTag)
+            ft.add(R.id.activity_report_container, fragment, fragmentTag);
             ft.commit();
         }
     }

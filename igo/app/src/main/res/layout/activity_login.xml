@@ -78,7 +78,7 @@
                 android:id="@+id/imageView"
                 android:layout_gravity="center"
 
-                android:background="@drawable/i2" />
+                android:background="@drawable/p2" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

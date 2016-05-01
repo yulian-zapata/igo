@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckedTextView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -134,9 +135,9 @@ public class adaptador extends BaseExpandableListAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.items_layout, null);
         }
-        GrupoDeItems grupo = (GrupoDeItems) getGroup(groupPosition);
-        ((CheckedTextView) convertView).setText(grupo.string);
-        ((CheckedTextView) convertView).setChecked(isExpanded);
+        /*GrupoDeItems grupo = (GrupoDeItems) getGroup(groupPosition);
+        ((RelativeLayout) convertView).setText(grupo.string);
+        ((RelativeLayout) convertView).setChecked(isExpanded);*/
         return convertView;
     }
 

@@ -11,13 +11,6 @@
         android:layout_height="28dp"
         android:text="@string/m5" />
 
-    <ImageView
-        android:layout_width="595dp"
-        android:layout_height="370dp"
-        android:id="@+id/imageView"
-        android:layout_gravity="center"
-        android:src="@drawable/p3" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

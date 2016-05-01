@@ -17,7 +17,7 @@ public class MainActivityList  extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_list);
         crearDatos();
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listViewexp);
         adaptador adapter = new adaptador(this, grupos);

@@ -72,13 +72,6 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="595dp"
-                android:layout_height="370dp"
-                android:id="@+id/imageView"
-                android:layout_gravity="center"
-
-                android:background="@drawable/p2" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

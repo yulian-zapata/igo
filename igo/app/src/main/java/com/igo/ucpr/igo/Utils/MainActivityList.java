@@ -24,19 +24,19 @@ public class MainActivityList  extends Activity {
         listView.setAdapter(adapter);
     }
     public void crearDatos() {
-        GrupoDeItems grupo0 = new GrupoDeItems("Lechon");
-        grupo0.children.add("Al horno");
-        grupo0.children.add("A la parrilla");
+        GrupoDeItems grupo0 = new GrupoDeItems("Grupo 0");
+        grupo0.children.add("Chorro de la guerra");
+        grupo0.children.add("Cerro Batero");
         grupos.append(0, grupo0);
-        GrupoDeItems grupo1 = new GrupoDeItems("Pescado");
-        grupo1.children.add("Paella");
-        grupo1.children.add("A la parrilla");
-        grupo1.children.add("Frito");
+        GrupoDeItems grupo1 = new GrupoDeItems("Grupo 1");
+        grupo1.children.add("Cascade de la guerra");
+        grupo1.children.add("Minas del chaquiro");
+        grupo1.children.add("Cascada de termales");
         grupos.append(1, grupo1);
-        GrupoDeItems grupo2 = new GrupoDeItems("Sandwichs");
-        grupo2.children.add("Jamón, queso y ananá");
-        grupo2.children.add("Pollo, morrones y aceitunas");
-        grupo2.children.add("Carlitos");
+        GrupoDeItems grupo2 = new GrupoDeItems("Grupo 2");
+        grupo2.children.add("La suiza");
+        grupo2.children.add("Pendiente...");
+        grupo2.children.add("Pendiente...");
         grupos.append(2, grupo2);
     }
     @Override

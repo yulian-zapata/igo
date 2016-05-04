@@ -60,28 +60,29 @@ public class adaptador extends BaseExpandableListAdapter {
             case 0:
                 switch (childPosition){
                     case 0:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l7, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l21, 0, 0, 0);
                         break;
                     case 1:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l6, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l12, 0, 0, 0);
                         break;
                 }
                 break;
             case 1:
                 switch (childPosition){
                     case 0:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l4, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l13, 0, 0, 0);
                         break;
                     case 1:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l5, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l22, 0, 0, 0);
                         break;
                     case 2:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l1, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l20, 0, 0, 0);
                         break;
                 }
                 break;
             case 2:
-                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l2, 0, 0, 0);
+                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l27, 0, 0, 0);
+
                 break;
         }
         convertView.setOnClickListener(new View.OnClickListener() {

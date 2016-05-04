@@ -2,55 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/abc_list_focused_holo"
+    android:background="@color/abc_search_url_text_pressed"
     tools:context=".Activitys.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="424dp"
-        android:layout_height="28dp"
+        android:layout_width="440dp"
+        android:layout_height="20dp"
         android:text="@string/m5" />
-
-    <Button
-        android:id="@+id/consultar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:text="Consultar" />
-
-    <Button
-        android:id="@+id/compartir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:text="Compartir"
-
-
-        />
-
-    <Button
-        android:id="@+id/reportar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:text="Reportar" />
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="484dp"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".Activitys.MainActivity">
+        tools:context=".Activitys.MainActivity"
+        android:background="@drawable/l15"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:weightSum="1">
 
-        <ExpandableListView
-            android:id="@+id/listViewexp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ExpandableListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B i e n v e n i d o"
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical"
+            android:textColor="#dcc20e0e"
+            android:textColorHighlight="#390505"
+            android:textSize="25dp"
+            android:height="50dp" />
+
+        <Button
+            android:id="@+id/consultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consultar"
+            android:ellipsize="middle"
+            android:clickable="false"
+            android:visibility="visible"
+            android:layout_gravity="bottom" />
+
 
     </LinearLayout>
 

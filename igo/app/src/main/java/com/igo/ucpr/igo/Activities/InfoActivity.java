@@ -1,4 +1,4 @@
-package com.igo.ucpr.igo.Activitys;
+package com.igo.ucpr.igo.Activities;
 
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -9,20 +9,20 @@ import android.os.Bundle;
 
 import com.igo.ucpr.igo.R;
 
-public class ReportActivity extends AppCompatActivity  implements CompartirFragment.OnFragmentInteractionListener {
+public class InfoActivity extends AppCompatActivity  implements InfoFragment.OnFragmentInteractionListener {
     Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report);
+        setContentView(R.layout.activity_informacion);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        String fragmentTag = ReportFragment.TAG;
+        String fragmentTag = InfoFragment.TAG;
         if (savedInstanceState == null) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
-            fragment = new ReportFragment();
-            ft.add(R.id.activity_report_container, fragment, fragmentTag);
+            fragment = new InfoFragment();
+            ft.add(R.id.activity_info_container, fragment, fragmentTag);
             ft.commit();
         }
     }

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.MainFragment"
+    tools:context=".Activities.MainFragment"
     android:background="@drawable/abc_list_focused_holo">
 
     <!-- TODO: Update blank fragment layout -->

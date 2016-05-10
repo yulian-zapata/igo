@@ -1,7 +1,5 @@
-package com.igo.ucpr.igo.Activitys;
+package com.igo.ucpr.igo.Activities;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;

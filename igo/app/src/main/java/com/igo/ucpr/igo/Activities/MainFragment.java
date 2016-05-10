@@ -1,4 +1,4 @@
-package com.igo.ucpr.igo.Activitys;
+package com.igo.ucpr.igo.Activities;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.igo.ucpr.igo.Activitys;
+package com.igo.ucpr.igo.Activities;
 
 import android.content.Context;
 import android.net.Uri;
@@ -19,13 +19,13 @@ import com.igo.ucpr.igo.R;
  * Use the {@link InfoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ReportFragment extends Fragment {
+public class CompartirFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    public static String TAG = ReportFragment.class.getSimpleName();
+    public static String TAG = CompartirFragment.class.getSimpleName();
 
 
     // TODO: Rename and change types of parameters
@@ -34,7 +34,7 @@ public class ReportFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ReportFragment() {
+    public CompartirFragment() {
         // Required empty public constructor
     }
 
@@ -47,8 +47,8 @@ public class ReportFragment extends Fragment {
      * @return A new instance of fragment InfoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ReportFragment newInstance(String param1, String param2) {
-        ReportFragment fragment = new ReportFragment();
+    public static CompartirFragment newInstance(String param1, String param2) {
+        CompartirFragment fragment = new CompartirFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

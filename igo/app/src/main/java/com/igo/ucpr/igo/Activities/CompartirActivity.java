@@ -1,4 +1,4 @@
-package com.igo.ucpr.igo.Activitys;
+package com.igo.ucpr.igo.Activities;
 
 import android.net.Uri;
 import android.support.v4.app.Fragment;

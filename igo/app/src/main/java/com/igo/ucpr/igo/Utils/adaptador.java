@@ -65,6 +65,7 @@ public class adaptador extends BaseExpandableListAdapter {
                     case 1:
                         textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l12, 0, 0, 0);
                         break;
+
                 }
                 break;
             case 1:
@@ -84,11 +85,17 @@ public class adaptador extends BaseExpandableListAdapter {
                 textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l27, 0, 0, 0);
 
                 break;
+            case 3:
+                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l11, 0, 0, 0);
+                break;
+            case 4:
+                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l23, 0, 0, 0);
+                break;
         }
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity, children + " - Item: " + groupPosition + " - Subitem:" + childPosition, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, children + "" + groupPosition + " " + childPosition, Toast.LENGTH_SHORT).show();
             }
         });
         return convertView;

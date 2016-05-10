@@ -21,6 +21,7 @@ public class MainActivityList  extends Activity {
         crearDatos();
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listViewexp);
         adaptador adapter = new adaptador(this, grupos);
+        adapter.getAllImages();
         listView.setAdapter(adapter);
     }
     public void crearDatos() {

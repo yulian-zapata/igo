@@ -1,7 +1,9 @@
 package com.igo.ucpr.igo.Utils;
 
 import android.app.Activity;
+import android.util.Log;
 import android.util.SparseArray;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import retrofit2.Callback;
+
+import com.igo.ucpr.igo.Networking.HttpResponse;
+import com.igo.ucpr.igo.Networking.HttpService;
+import com.igo.ucpr.igo.Networking.Servicio;
 import com.igo.ucpr.igo.R;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by Frank on 22/04/2016.
@@ -21,12 +31,37 @@ public class adaptador extends BaseExpandableListAdapter {
     public LayoutInflater inflater;
     public Activity activity;
     TextView textvw = null;
+    HttpService service = Servicio.createService(HttpService.class);
 
     // Constructor
     public adaptador(Activity act, SparseArray<GrupoDeItems> grupos) {
         activity = act;
         this.grupos = grupos;
         inflater = act.getLayoutInflater();
+    }
+
+    public void getAllImages() {
+        Call<HttpResponse> call = service.obtenerImagenes();
+        call.enqueue(callback());
+    }
+
+    public Callback callback() {
+        return new Callback<HttpResponse>() {
+
+            @Override
+            public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
+                if (response.isSuccessful()) {
+                    HttpResponse respuesta = response.body();
+                    Log.e("Adaptador", "" + respuesta);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<HttpResponse> call, Throwable t) {
+                Log.e("AdaptadorError", ""+t.getCause());
+            }
+        };
+
     }
 
     // Nos devuelve los datos asociados a un subitem en base
@@ -56,9 +91,9 @@ public class adaptador extends BaseExpandableListAdapter {
         }
         textvw = (TextView) convertView.findViewById(R.id.textView1);
         textvw.setText(children);
-        switch (groupPosition){
+        switch (groupPosition) {
             case 0:
-                switch (childPosition){
+                switch (childPosition) {
                     case 0:
                         textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l21, 0, 0, 0);
                         break;
@@ -69,7 +104,7 @@ public class adaptador extends BaseExpandableListAdapter {
                 }
                 break;
             case 1:
-                switch (childPosition){
+                switch (childPosition) {
                     case 0:
                         textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l13, 0, 0, 0);
                         break;

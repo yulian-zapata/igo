@@ -13,11 +13,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Generador de servicios para la comunicacion  con la api rest
- * Created by hash on 3/10/16.
  */
-public class ServiceGenerator {
+public class Servicio {
 
-    private static final String API_BASE_URL = "http://placego-rest.herokuapp.com/";
+    private static final String API_BASE_URL = "http://igo-rest.herokuapp.com/";
     private static final HttpLoggingInterceptor logging = new HttpLoggingInterceptor().
             setLevel(HttpLoggingInterceptor.Level.BODY);
     private static final OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -26,32 +25,28 @@ public class ServiceGenerator {
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
 
-    public static <S> S createService(Class<S> serviceClass) {
-        return createService(serviceClass, null);
-    }
 
     /**
      * crea el servicio retrofit para la comunicacion
      *
      * @param serviceClass objeto interface
-     * @param authToken    token del usuario
+
      * @return retrofit service
      */
-    public static <S> S createService(Class<S> serviceClass, final String authToken) {
-        if (authToken != null) {
-            httpClient.addInterceptor(new Interceptor() {
-                @Override
-                public Response intercept(Interceptor.Chain chain) throws IOException {
-                    Request original = chain.request();
-                    Request.Builder requestBuilder = original.newBuilder()
-                            .header("token", authToken)
-                            .method(original.method(), original.body());
+    public static <S> S createService(Class<S> serviceClass) {
 
-                    Request request = requestBuilder.build();
-                    return chain.proceed(request);
-                }
-            });
-        }
+        httpClient.addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Interceptor.Chain chain) throws IOException {
+                Request original = chain.request();
+                Request.Builder requestBuilder = original.newBuilder()
+                        .method(original.method(), original.body());
+
+                Request request = requestBuilder.build();
+                return chain.proceed(request);
+            }
+        });
+
         httpClient.addInterceptor(logging);
         OkHttpClient client = httpClient.build();
         Retrofit retrofit = builder.client(client).build();

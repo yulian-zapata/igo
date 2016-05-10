@@ -15,7 +15,7 @@ public class ErrorUtils {
 
     public static APIError parseError(Response<?> response) {
         Converter<ResponseBody, APIError> converter =
-                ServiceGenerator.getRretrofit().responseBodyConverter(APIError.class, new Annotation[0]);
+                Servicio.getRretrofit().responseBodyConverter(APIError.class, new Annotation[0]);
 
         APIError error;
 

@@ -91,6 +91,19 @@ public class LoginActivity extends AppCompatActivity {
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+
+        Button SignUpButton = (Button) findViewById(R.id.email_sign_up_button);
+        SignUpButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
+
+            }
+        });
+
+        mLoginFormView = findViewById(R.id.login_form);
+        mProgressView = findViewById(R.id.login_progress);
     }
 
     private void populateAutoComplete() {
@@ -192,17 +205,18 @@ public class LoginActivity extends AppCompatActivity {
     private void login(String email, String password) {
         HttpService service = Servicio.createService(HttpService.class);
         usuario Usuario=new usuario(email,password);
-        Call<HttpResponse> call = service.Login(Usuario);
+        Call<Void> call = service.Login(Usuario);
         call.enqueue(callback());
     }
 
-    public Callback callback() {
-        return new Callback<HttpResponse>() {
+    private Callback<Void> callback() {
+
+        return new Callback<Void>() {
 
             @Override
-            public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
+            public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
-                   // HttpResponse respuesta = response.body();
+                    // HttpResponse respuesta = response.body();
                     pDialog.dismissWithAnimation();
                     Log.e("Adaptador", "" );
 
@@ -218,13 +232,14 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<HttpResponse> call, Throwable t) {
+            public void onFailure(Call<Void> call, Throwable t) {
                 pDialog.dismissWithAnimation();
                 Log.e("AdaptadorError", ""+t);
             }
         };
-
     }
+
+
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
         return email.contains("@");

@@ -22,7 +22,7 @@ import com.igo.ucpr.igo.Utils.MainActivityList;
  * to handle interaction events.
  * create an instance of this fragment.
  */
-public class MainFragment extends Fragment {
+public class MainRegistro extends Fragment {
 
 
     public static String TAG = MainFragment.class.getSimpleName();
@@ -30,7 +30,7 @@ public class MainFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public MainFragment() {
+    public MainRegistro() {
 
 
         // Required empty public constructor
@@ -76,8 +76,8 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-        Button consultar = (Button) view.findViewById(R.id.consultar);
+        View view = inflater.inflate(R.layout.fragment_info, container, false);
+        Button consultar = (Button) view.findViewById(R.id.email_sign_up_button);
         consultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

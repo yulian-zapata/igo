@@ -20,7 +20,12 @@ public interface HttpService {
 
 
     @POST("/login")
-    Call<HttpResponse> Login(
+    Call<Void> Login(
+            @Body usuario usuario
+    );
+
+    @POST("/signup")
+    Call<Void> Create(
             @Body usuario usuario
     );
 }

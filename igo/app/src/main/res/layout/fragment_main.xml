@@ -28,6 +28,13 @@
         android:weightSum="1">
 
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver todas"
+            android:id="@+id/All_images"
+            android:layout_gravity="bottom" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

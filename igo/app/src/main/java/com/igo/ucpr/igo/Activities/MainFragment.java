@@ -87,7 +87,14 @@ public class MainFragment extends Fragment {
             }
         });
 
+        Button todasImg = (Button) view.findViewById(R.id.All_images);
+        todasImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                startActivity(new Intent(getActivity(), AllImgActivity.class));
+            }
+        });
         return view;
 
 

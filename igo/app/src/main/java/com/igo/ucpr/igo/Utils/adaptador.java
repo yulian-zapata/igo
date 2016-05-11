@@ -31,7 +31,7 @@ public class adaptador extends BaseExpandableListAdapter {
     public LayoutInflater inflater;
     public Activity activity;
     TextView textvw = null;
-    HttpService service = Servicio.createService(HttpService.class);
+
 
     // Constructor
     public adaptador(Activity act, SparseArray<GrupoDeItems> grupos) {
@@ -40,29 +40,7 @@ public class adaptador extends BaseExpandableListAdapter {
         inflater = act.getLayoutInflater();
     }
 
-    public void getAllImages() {
-        Call<HttpResponse> call = service.obtenerImagenes();
-        call.enqueue(callback());
-    }
 
-    public Callback callback() {
-        return new Callback<HttpResponse>() {
-
-            @Override
-            public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
-                if (response.isSuccessful()) {
-                    HttpResponse respuesta = response.body();
-                    Log.e("Adaptador", "" + respuesta);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<HttpResponse> call, Throwable t) {
-                Log.e("AdaptadorError", ""+t.getCause());
-            }
-        };
-
-    }
 
     // Nos devuelve los datos asociados a un subitem en base
     // a la posición

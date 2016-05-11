@@ -13,7 +13,7 @@ public class HttpResponse {
 
     public JsonElement[] data;
 
-    public JsonElement[] body;
+    public  String code;
 }
 
 

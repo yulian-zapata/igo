@@ -61,6 +61,8 @@ public class ItemFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        DummyContent.getAllImages();
+
 
         // Set the adapter
         if (view instanceof RecyclerView) {

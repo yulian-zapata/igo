@@ -1,9 +1,23 @@
 package com.igo.ucpr.igo.Activities.dummy;
 
+import android.util.Log;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.igo.ucpr.igo.Networking.HttpResponse;
+import com.igo.ucpr.igo.Networking.HttpService;
+import com.igo.ucpr.igo.Networking.Servicio;
+
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -12,7 +26,7 @@ import java.util.Map;
  * TODO: Replace all uses of this class before publishing your app.
  */
 public class DummyContent {
-
+    static HttpService service = Servicio.createService(HttpService.class);
     /**
      * An array of sample (dummy) items.
      */
@@ -68,5 +82,38 @@ public class DummyContent {
         public String toString() {
             return content;
         }
+    }
+    public static void getAllImages() {
+        Call<HttpResponse> call = service.obtenerImagenes();
+        call.enqueue(callback());
+    }
+
+    public static Callback<HttpResponse> callback() {
+        return new Callback<HttpResponse>() {
+
+            @Override
+            public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
+                if (response.isSuccessful()) {
+                    HttpResponse respuesta = response.body();
+                   // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
+                   // CargaImagenes( respuesta.data[0].getAsJsonArray());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<HttpResponse> call, Throwable t) {
+                Log.e("AdaptadorError", ""+t.getCause());
+            }
+        };
+
+    }
+    public static void CargaImagenes(JsonArray array){
+        for (int i = 0; i < array.size(); i++)
+        {
+            JsonElement json_data = array.getAsJsonObject().get("path");
+            Log.e("DummiContent",json_data+"");
+        }
+
+
     }
 }

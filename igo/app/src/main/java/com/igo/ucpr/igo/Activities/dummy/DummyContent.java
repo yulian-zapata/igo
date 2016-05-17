@@ -94,17 +94,33 @@ public class DummyContent {
             @Override
             public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
                 if (response.isSuccessful()) {
-
+                    HttpResponse respuesta = response.body();
+                    CargaImagenes(respuesta.data[0]);
+                    // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
+                    // CargaImagenes( respuesta.data[0].getAsJsonArray());
                 }
             }
 
             @Override
             public void onFailure(Call<HttpResponse> call, Throwable t) {
-                Log.e("AdaptadorError", ""+t.getCause());
+                Log.e("AdaptadorError", "" + t.getCause());
             }
         };
 
     }
+    public static void CargaImagenes(JsonArray array){
+        for (int i = 0; i < array.size(); i++)
+        {
+            JsonElement json_data = array.getAsJsonObject().get("path");
+            Log.e("DummiContent",json_data+"");
+        }
 
-
+    public static void CargaImagenes(JsonElement array) {
+        for (int i = 0; i < array.getAsJsonArray().size(); i++) {
+            JsonElement image = array.getAsJsonArray().get(i);
+            Log.e("ID ", " " +image.getAsJsonObject().get("name"));
+            Log.e("ID ", " " +image.getAsJsonObject().get("path"));
+            Image.add(i, image.getAsJsonObject().get("path").toString());
+        }
+    }
 }

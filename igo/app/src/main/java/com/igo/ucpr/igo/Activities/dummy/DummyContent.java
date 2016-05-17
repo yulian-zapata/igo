@@ -38,6 +38,7 @@ public class DummyContent {
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     private static final int COUNT = 25;
+    private static List<String> Image;
 
     static {
         // Add some sample items.
@@ -108,12 +109,7 @@ public class DummyContent {
         };
 
     }
-    public static void CargaImagenes(JsonArray array){
-        for (int i = 0; i < array.size(); i++)
-        {
-            JsonElement json_data = array.getAsJsonObject().get("path");
-            Log.e("DummiContent",json_data+"");
-        }
+
 
     public static void CargaImagenes(JsonElement array) {
         for (int i = 0; i < array.getAsJsonArray().size(); i++) {

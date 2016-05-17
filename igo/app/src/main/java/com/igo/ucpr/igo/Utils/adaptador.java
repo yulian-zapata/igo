@@ -73,10 +73,14 @@ public class adaptador extends BaseExpandableListAdapter {
             case 0:
                 switch (childPosition) {
                     case 0:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l21, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l17, 0, 0, 0);
                         break;
                     case 1:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l12, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l26, 0, 0, 0);
+
+                        break;
+                    case 2:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p3, 0, 0, 0);
                         break;
 
                 }
@@ -84,25 +88,42 @@ public class adaptador extends BaseExpandableListAdapter {
             case 1:
                 switch (childPosition) {
                     case 0:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l13, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l14, 0, 0, 0);
                         break;
                     case 1:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l22, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p1, 0, 0, 0);
                         break;
                     case 2:
-                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l20, 0, 0, 0);
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l18, 0, 0, 0);
                         break;
                 }
                 break;
             case 2:
-                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l27, 0, 0, 0);
+                switch (childPosition) {
+                    case 0:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p6, 0, 0, 0);
+                        break;
+                    case 1:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p4, 0, 0, 0);
+                        break;
+                    case 2:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p5, 0, 0, 0);
+                        break;
+                }
+                break;
 
-                break;
             case 3:
-                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l11, 0, 0, 0);
-                break;
-            case 4:
-                textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.l23, 0, 0, 0);
+                switch (childPosition) {
+                    case 0:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p4, 0, 0, 0);
+                        break;
+                    case 1:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p7, 0, 0, 0);
+                        break;
+                    case 2:
+                        textvw.setCompoundDrawablesWithIntrinsicBounds(R.drawable.p8, 0, 0, 0);
+                        break;
+                }
                 break;
         }
         convertView.setOnClickListener(new View.OnClickListener() {
@@ -113,13 +134,11 @@ public class adaptador extends BaseExpandableListAdapter {
         });
         return convertView;
     }
-
     // Nos devuelve la cantidad de subitems que tiene un ítem
     @Override
     public int getChildrenCount(int groupPosition) {
         return grupos.get(groupPosition).children.size();
     }
-
     //Los datos de un ítem especificado por groupPosition
     @Override
     public Object getGroup(int groupPosition) {

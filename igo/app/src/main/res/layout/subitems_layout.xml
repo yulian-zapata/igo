@@ -10,7 +10,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/l7"
+
         android:drawablePadding="5dp"
         android:gravity="center_vertical"
         android:text="@string/m5"

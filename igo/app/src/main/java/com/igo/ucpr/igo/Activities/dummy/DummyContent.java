@@ -94,9 +94,7 @@ public class DummyContent {
             @Override
             public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
                 if (response.isSuccessful()) {
-                    HttpResponse respuesta = response.body();
-                   // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
-                   // CargaImagenes( respuesta.data[0].getAsJsonArray());
+
                 }
             }
 
@@ -107,13 +105,6 @@ public class DummyContent {
         };
 
     }
-    public static void CargaImagenes(JsonArray array){
-        for (int i = 0; i < array.size(); i++)
-        {
-            JsonElement json_data = array.getAsJsonObject().get("path");
-            Log.e("DummiContent",json_data+"");
-        }
 
 
-    }
 }

@@ -8,8 +8,6 @@ import com.igo.ucpr.igo.Networking.HttpResponse;
 import com.igo.ucpr.igo.Networking.HttpService;
 import com.igo.ucpr.igo.Networking.Servicio;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -83,6 +81,7 @@ public class DummyContent {
             return content;
         }
     }
+
     public static void getAllImages() {
         Call<HttpResponse> call = service.obtenerImagenes();
         call.enqueue(callback());
@@ -95,25 +94,25 @@ public class DummyContent {
             public void onResponse(Call<HttpResponse> call, Response<HttpResponse> response) {
                 if (response.isSuccessful()) {
                     HttpResponse respuesta = response.body();
-                   // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
-                   // CargaImagenes( respuesta.data[0].getAsJsonArray());
+                    CargaImagenes(respuesta.data[0]);
+                    // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
+                    // CargaImagenes( respuesta.data[0].getAsJsonArray());
                 }
             }
 
             @Override
             public void onFailure(Call<HttpResponse> call, Throwable t) {
-                Log.e("AdaptadorError", ""+t.getCause());
+                Log.e("AdaptadorError", "" + t.getCause());
             }
         };
 
     }
-    public static void CargaImagenes(JsonArray array){
-        for (int i = 0; i < array.size(); i++)
-        {
-            JsonElement json_data = array.getAsJsonObject().get("path");
-            Log.e("DummiContent",json_data+"");
+
+    public static void CargaImagenes(JsonElement array) {
+        for (int i = 0; i < array.getAsJsonArray().size(); i++) {
+            JsonElement a = array.getAsJsonArray().get(i);
+            Log.e("ID ", " " +a.getAsJsonObject().get("name"));
+            Log.e("ID ", " " +a.getAsJsonObject().get("path"));
         }
-
-
     }
 }

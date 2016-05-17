@@ -29,6 +29,7 @@ public class DummyContent {
      * An array of sample (dummy) items.
      */
     public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<String> Image = new ArrayList<String>();
 
     /**
      * A map of sample (dummy) items, by ID.
@@ -110,9 +111,10 @@ public class DummyContent {
 
     public static void CargaImagenes(JsonElement array) {
         for (int i = 0; i < array.getAsJsonArray().size(); i++) {
-            JsonElement a = array.getAsJsonArray().get(i);
-            Log.e("ID ", " " +a.getAsJsonObject().get("name"));
-            Log.e("ID ", " " +a.getAsJsonObject().get("path"));
+            JsonElement image = array.getAsJsonArray().get(i);
+            Log.e("ID ", " " +image.getAsJsonObject().get("name"));
+            Log.e("ID ", " " +image.getAsJsonObject().get("path"));
+            Image.add(i, image.getAsJsonObject().get("path").toString());
         }
     }
 }

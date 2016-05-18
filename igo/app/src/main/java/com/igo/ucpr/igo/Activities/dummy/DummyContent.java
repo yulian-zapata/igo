@@ -38,6 +38,11 @@ public class DummyContent {
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     private static final int COUNT = 25;
+
+    public static List<String> getImage() {
+        return Image;
+    }
+
     private static List<String> Image = new ArrayList<String>();
 
     static {

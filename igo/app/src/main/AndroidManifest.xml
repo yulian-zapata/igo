@@ -25,10 +25,6 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Utils.MainActivityList" />
         <activity android:name=".Activities.RegisterActivity" />
-        <activity
-            android:name=".Activities.AllImgActivity"
-            android:label="@string/title_activity_all_img"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.ImageListActivity"></activity>
     </application>
 

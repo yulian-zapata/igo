@@ -2,7 +2,6 @@ package com.igo.ucpr.igo.Activities.dummy;
 
 import android.util.Log;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.igo.ucpr.igo.Networking.HttpResponse;
 import com.igo.ucpr.igo.Networking.HttpService;
@@ -96,8 +95,6 @@ public class DummyContent {
                 if (response.isSuccessful()) {
                     HttpResponse respuesta = response.body();
                     CargaImagenes(respuesta.data[0]);
-                    // Log.e("Adaptador", "" + respuesta.data[0].getAsJsonArray());
-                    // CargaImagenes( respuesta.data[0].getAsJsonArray());
                 }
             }
 
@@ -112,8 +109,8 @@ public class DummyContent {
     public static void CargaImagenes(JsonElement array) {
         for (int i = 0; i < array.getAsJsonArray().size(); i++) {
             JsonElement image = array.getAsJsonArray().get(i);
-            Log.e("ID ", " " +image.getAsJsonObject().get("name"));
-            Log.e("ID ", " " +image.getAsJsonObject().get("path"));
+            Log.e("ID ", " " + image.getAsJsonObject().get("name"));
+            Log.e("ID ", " " + image.getAsJsonObject().get("path"));
             Image.add(i, image.getAsJsonObject().get("path").toString());
         }
     }

@@ -92,7 +92,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(getActivity(), AllImgActivity.class));
+                startActivity(new Intent(getActivity(), ImageListActivity.class));
             }
         });
         return view;

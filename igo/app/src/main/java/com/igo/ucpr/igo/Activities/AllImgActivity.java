@@ -27,7 +27,7 @@ public class AllImgActivity extends AppCompatActivity implements ItemFragment.On
         if (savedInstanceState == null) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             Fragment fragment = new ItemFragment();
-           // ft.add(R.id.activity_img_container, fragment, fragmentTag);
+            ft.add(R.id.activity_img_container, fragment, fragmentTag);
             ft.commit();
         }
     }

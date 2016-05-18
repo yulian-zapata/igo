@@ -7,6 +7,8 @@ import com.igo.ucpr.igo.Networking.HttpResponse;
 import com.igo.ucpr.igo.Networking.HttpService;
 import com.igo.ucpr.igo.Networking.Servicio;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +30,6 @@ public class DummyContent {
      * An array of sample (dummy) items.
      */
     public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
-    public static final List<String> Image = new ArrayList<String>();
 
     /**
      * A map of sample (dummy) items, by ID.
@@ -36,6 +37,12 @@ public class DummyContent {
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     private static final int COUNT = 25;
+
+    public static List<String> getImage() {
+        return Image;
+    }
+
+    private static List<String> Image = new ArrayList<String>();
 
     static {
         // Add some sample items.
@@ -105,6 +112,7 @@ public class DummyContent {
         };
 
     }
+
 
     public static void CargaImagenes(JsonElement array) {
         for (int i = 0; i < array.getAsJsonArray().size(); i++) {

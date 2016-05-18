@@ -1,14 +1,17 @@
 package com.igo.ucpr.igo.Activities;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.igo.ucpr.igo.Activities.ItemFragment.OnListFragmentInteractionListener;
 import com.igo.ucpr.igo.Activities.dummy.DummyContent.DummyItem;
 import com.igo.ucpr.igo.R;
+import com.igo.ucpr.igo.Utils.UriImageLoader;
 
 import java.util.List;
 
@@ -21,14 +24,18 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
+    public Context context;
 
-    public MyItemRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyItemRecyclerViewAdapter(List<DummyItem> items,
+                                     OnListFragmentInteractionListener listener,Context context) {
         mValues = items;
         mListener = listener;
+        this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_item, parent, false);
         return new ViewHolder(view);
@@ -39,7 +46,8 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
         holder.mContentView.setText(mValues.get(position).content);
-
+        UriImageLoader.setImageFromUrl("https://drive.google.com/open?id=0B2ZhOfSVGhYGb1RaZVhmUndoVXM",
+                holder.image,new AllImgActivity());
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +67,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
+        public final ImageView image;
         public final TextView mIdView;
         public final TextView mContentView;
         public DummyItem mItem;
@@ -67,6 +76,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             super(view);
             mView = view;
             mIdView = (TextView) view.findViewById(R.id.id);
+            image = (ImageView) view.findViewById(R.id.image);
             mContentView = (TextView) view.findViewById(R.id.content);
         }
 

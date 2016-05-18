@@ -23,17 +23,10 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context=".Activities.MainActivity"
         android:background="@drawable/l15"
-        android:layout_gravity="center"
+        android:layout_gravity="right|center_vertical"
         android:visibility="visible"
         android:weightSum="1">
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ver todas"
-            android:id="@+id/All_images"
-            android:layout_gravity="bottom" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,21 +36,53 @@
             android:layout_gravity="center_vertical"
             android:textColor="#dcc20e0e"
             android:textColorHighlight="#390505"
-            android:textSize="25dp"
-            android:height="50dp" />
-
-        <Button
-            android:id="@+id/consultar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Consultar"
-            android:ellipsize="middle"
-            android:clickable="false"
-            android:visibility="visible"
-            android:layout_gravity="bottom" />
+            android:textSize="40dp"
+            android:height="60dp"
+            android:layout_weight="1"
+            android:textColorLink="#080808"
+            android:linksClickable="false"
+            android:longClickable="false"
+            android:textIsSelectable="false"
+            android:theme="@style/AppTheme"
+            android:singleLine="false" />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/consultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendados"
+        android:ellipsize="middle"
+        android:clickable="false"
+        android:visibility="visible"
+        android:layout_gravity="left|top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Todas"
+        android:id="@+id/All_images"
+        android:layout_gravity="right|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:text="El turismo natural lo tiene todo. Visita nuestros sitios recomendados y atrévete a disfrutar de muchas aventuras al aire libre."
+        android:id="@+id/textView2"
+        android:layout_gravity="left|bottom"
+        android:textColor="#dcdad6d6"
+        android:textColorHighlight="#390505"
+        android:textSize="25dp"
+        android:height="60dp"
+        android:layout_weight="1"
+        android:textColorLink="#080808"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:textIsSelectable="false"
+        android:theme="@style/AppTheme"
+        android:singleLine="false" />
 
 
 </FrameLayout>
